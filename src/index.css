@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bs-primary: #0d6efd;
+  --navy: #003768;
+  --navy-deep: #0a243a;
+  --teal: #3caa9f;
+  --mist: #e8f0f3;
+}
+
+body {
+  margin: 0;
+  font-family: Figtree, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #212529;
+  background: #ffffff;
+}
+
+.container-max {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.btn-navy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #003768;
+  color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  padding: 16px 32px;
+  font-family: Figtree, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 28px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.3s ease, opacity 0.3s ease;
+}
+.btn-navy:hover {
+  background: #0a243a;
+}
+
+.btn-white {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  color: #212529;
+  border-radius: 6px;
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: rgba(0, 0, 0, 0.9) 1px 1px 2px 0px;
+  transition: opacity 0.3s ease;
+}
+.btn-white:hover {
+  opacity: 0.9;
+}
+
+.input-field {
+  width: 100%;
+  background: #ffffff;
+  color: #666666;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  padding: 16px 24px;
+  font-family: Figtree, sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+}
+.input-field:focus {
+  outline: none;
+  border-color: #003768;
+}
+
+.page-hero {
+  position: relative;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+}
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 36, 58, 0.55);
+}
+.page-hero h1 {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 600;
+  margin: 0;
+}
+
+.section-title {
+  font-size: clamp(28px, 4vw, 36px);
+  font-weight: 600;
+  color: #0a243a;
+  margin: 0 0 16px;
+}
+
+.card-room {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: rgba(0, 72, 88, 0.1) 5px 3px 40px 0px;
+  transition: transform 0.3s ease;
+}
+.card-room:hover {
+  transform: translateY(-4px);
+}
+
+.fade-in {
+  animation: fadeUp 0.5s ease both;
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
